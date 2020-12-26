@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pepsi.com</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="pepsi_page_style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+	<section class="sec">
+
+		<header>
+			<a href="#"><img src="logo.png" class="logo"></a>
+			
+			<div class="togglemenu" onclick="menuToggle();"></div>
+			<ul class="navigation">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">What's new</a></li>
+				<li><a href="#">NewsLetter</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+
+		<div class="content">
+			<div class="text_box">
+				<h2>That's what<br><span>i like</span></h2>
+				<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+
+				<a href="#">view all products</a>
+			</div>
+
+			<div class="img_box">
+				<img src="pepsi001.png" alt="pepsi cane image" class="pepsi">
+				
+			</div>
+			
+		</div>
+
+		<ul class="thumb">
+			<li><img src="pepsi001.png" onclick="imageSlider('pepsi001.png'),bgcolorchange('#0062be')"></li>
+			<li><img src="pepsi002.png" onclick="imageSlider('pepsi002.png'),bgcolorchange('#ec0c2c')"></li>
+			<li><img src="pepsi003.png" onclick="imageSlider('pepsi003.png'),bgcolorchange('#1e1e1e')"></li>
+
+		</ul>
+
+		<ul class="sci">
+			<li><a href="#"><img src="facebook.png"></a></li>
+			<li><a href="#"><img src="twitter.png"></a></li>
+			<li><a href="#"><img src="instagram.png"></a></li>
+		</ul>
+	
+	</section>
+
+	<script type="text/javascript">
+		
+		function imageSlider(anything) {
+
+			document.querySelector('.pepsi').src = anything;
+		}
+		function bgcolorchange(color) {
+			
+			const raj= document.querySelector('.sec');
+
+			raj.style.background = color;
+		}
+		function menuToggle(){
+			const toggle=document.querySelector('.togglemenu');
+			const navigation=document.querySelector('.navigation');
+			toggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
